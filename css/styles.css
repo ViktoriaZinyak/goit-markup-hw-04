@@ -14,6 +14,7 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --border-porfolio-color: #ececec;
   --border-projects-color: #eeeeee;
+  --soc-icon-color: #AFB1B8
 }
 
 body {
@@ -234,7 +235,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   background: var(--second-bg-color);
@@ -298,11 +298,37 @@ header {
 }
 
 .item-text {
-  margin: 0;
+  margin: 0 0 16px 0;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
+
+.soc-network {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.soc-network-item + .soc-network-item {
+  margin-left: 10px;
+}
+
+.soc-link {
+width: 44px;
+height: 44px;
+display: flex;
+border-radius: 50%;
+justify-content: center;
+align-items: center;
+fill: var(--soc-icon-color)
+}
+
+.soc-link:hover {
+  fill: var(--main-bg-color);
+  background-color: var(--accent-color);
+}
+
 
 /*----------------------FOOTER----------------------*/
 
