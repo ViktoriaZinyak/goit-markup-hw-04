@@ -14,7 +14,8 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --border-porfolio-color: #ececec;
   --border-projects-color: #eeeeee;
-  --soc-icon-color: #AFB1B8
+  --soc-icon-color: #afb1b8;
+  --bg-footer-soc-icon: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -31,7 +32,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 .header-link.current {
@@ -83,6 +83,7 @@ header {
 
 .nav-container {
   display: flex;
+  max-width: 1600px;
 }
 
 .logo {
@@ -163,7 +164,7 @@ header {
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/hero-img.jpg");
-    background-color: var(--dark-bg-color)
+  background-color: var(--dark-bg-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,20 +316,64 @@ header {
 }
 
 .soc-link {
-width: 44px;
-height: 44px;
-display: flex;
-border-radius: 50%;
-justify-content: center;
-align-items: center;
-fill: var(--soc-icon-color)
+  width: 44px;
+  height: 44px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--soc-icon-color);
+  cursor: pointer;
 }
 
-.soc-link:hover {
+.soc-link:hover,
+.soc-link:focus {
   fill: var(--main-bg-color);
   background-color: var(--accent-color);
 }
 
+/*----------------------------CLIENTS-----------------*/
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  line-height: 1.17;
+  font-size: 36px;
+  color: var(--second-title-color);
+  text-align: center;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-item + .clients-item {
+  margin-left: 30px;
+}
+
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--soc-icon-color);
+  border-radius: 4px;
+  cursor: pointer;
+  fill: var(--soc-icon-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
 
 /*----------------------FOOTER----------------------*/
 
@@ -367,6 +412,53 @@ fill: var(--soc-icon-color)
 
 .logo-footer {
   color: var(--logo-footer-color);
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-soc {
+  margin-left: 70px;
+}
+
+.footer-soc-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: var(--main-title-color);
+  line-height: 1.14;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.footer-soc-item + .footer-soc-item {
+  margin-left: 10px;
+}
+
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--soc-icon-color);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--main-bg-color);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
 }
 
 /*----------------------PORTFOLIO----------------------*/
@@ -440,6 +532,12 @@ fill: var(--soc-icon-color)
   margin-right: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid var(--border-projects-color);
+}
+
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-content {
